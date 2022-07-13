@@ -1,0 +1,60 @@
+1. Crear carpeta de trabajao
+2. Ejecutar en terminal:
+> npm init -y
+3. Instalar dependencias
+> npm i express bcryptjs cors dotenv jsonwebtoken mongoose morgan helmet
+4. Modificar el archivo package.json:
+"scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+5. Crear los archivos: app.js
+const express = require('express')
+const app = express()
+
+module.exports = app
+
+6. Crear el archivo : index.js
+const app = require('./app')
+
+app.listen(3000)
+console.log('Running on port 3000')
+
+7. Agregar en el archivo app.js el modulo morgan
+
+8. Creamos la carpeta controllers
+9. Dentro de controllers, creamos el archivo products.controller.js
+	- Creamos las funciones para crear obtener midificar y eliminar datos
+	- Las exportamos
+
+10. Creamos una carpeta [routes]
+11. Creamos dentro de routes, un archivo "products.routes.js"
+	- implementamos el metodo Router()
+	- importamos las funciones de products.controller
+	- Creamos las rutas hacia las funciones especificas
+	- Exportamos las rutas
+12. En el archivo app.js
+	- importar la ruta de productos	
+	- ejecutar la ruta de productos
+13. Crear el archivo db.js
+14. Crear el archivo .env
+15. Importar la conexion a la DB en index
+17. Crear la carpeta models
+18. Crear el modelo en Products.models.js
+19. Importar y usar el modelo en "products.controller.js"
+20. Agregar el metodo json para recibir datos desde el req.body
+21. Crear los metodos get, post, put, delete... en "product.controller.js"
+22. Creamos el archivo "User.model.js"
+23. Creamos el modelo "Role.model.js"
+24. Creamos el archivo "auth,controller.js"
+25. Creamos el archivo "auth.router.js"
+26. Agregamos la nueva ruta al archivo "app.js"
+27. Comprobamos la funcionalidad de las rutas
+28. Creamos las funciones de encriptacion y comparacion de pass
+29. Crear roles, crear arpeta 'libs' y dentro un archivo 'initialSetup'
+30. Crear el modulo signIn
+31. Crear midlewares de autenticación
+30. Verificar el tipo de acceso -moderador-usuario-admin
+31. Crear rutas de usuarios
+32. Revisar si los roles existen
+33. Revisar si usuario y mail existen
